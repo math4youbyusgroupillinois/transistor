@@ -207,8 +207,8 @@ public class BomManagerImpl implements BomManager {
 					long platStartTime = System.currentTimeMillis();
 					//now we need to check if the cloud is active for this given platform
 					List<CmsCIRelation> platformCloudRels = cmProcessor.getFromCIRelations(plat.getCiId(), "base.Consumes", "account.Cloud");
-
-					check4Secondary(plat,platformCloudRels, getNspath(bomNsPath, plat));
+					// Disable secondarty check.	
+					//check4Secondary(plat,platformCloudRels, getNspath(bomNsPath, plat));
 					if (platformCloudRels.size() >0) {
 						
 						//Collections.sort(platformCloudRels,BINDING_COMPARATOR);
