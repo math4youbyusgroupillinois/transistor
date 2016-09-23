@@ -209,6 +209,8 @@ public class BomManagerImpl implements BomManager {
 					List<CmsCIRelation> platformCloudRels = cmProcessor.getFromCIRelations(plat.getCiId(), "base.Consumes", "account.Cloud");
 					// Disable secondarty check.	
 					//check4Secondary(plat,platformCloudRels, getNspath(bomNsPath, plat));
+					logger.info("skipping check secondary ");
+
 					if (platformCloudRels.size() >0) {
 						
 						//Collections.sort(platformCloudRels,BINDING_COMPARATOR);
